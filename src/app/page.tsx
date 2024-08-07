@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import AnimatedNumbers from "react-animated-numbers";
 
 export default function Home() {
   const [active, setActive] = React.useState(0);
@@ -83,8 +84,20 @@ export default function Home() {
                   Popular
                 </span>
               </p>
-              <p className="text-slate-500 text-md">
-                <span className="text-black font-medium">${starter}</span>/month
+              <p className="text-slate-500 text-md flex">
+                <span className="text-black font-medium flex items-center">
+                  ${" "}
+                  <AnimatedNumbers
+                    includeComma
+                    className="text-black font-medium"
+                    transitions={(index) => ({
+                      type: "spring",
+                      duration: 0.3,
+                    })}
+                    animateToNumber={starter}
+                  />
+                </span>
+                /month
               </p>
             </div>
             <div
@@ -109,8 +122,20 @@ export default function Home() {
           >
             <div className="flex flex-col items-start">
               <p className="font-semibold text-xl">Pro</p>
-              <p className="text-slate-500 text-md">
-                <span className="text-black font-medium">${pro}</span>/month
+              <p className="text-slate-500 text-md flex">
+                <span className="text-black font-medium flex items-center">
+                  ${" "}
+                  <AnimatedNumbers
+                    includeComma
+                    className="text-black font-medium"
+                    transitions={(index) => ({
+                      type: "spring",
+                      duration: 0.3,
+                    })}
+                    animateToNumber={pro}
+                  />
+                </span>
+                /month
               </p>
             </div>
             <div
