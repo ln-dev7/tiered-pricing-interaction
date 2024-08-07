@@ -1,8 +1,7 @@
-"use client";
-import React from "react";
 import AnimatedNumbers from "react-animated-numbers";
+import React from "react";
 
-export default function Home() {
+export default function App() {
   const [active, setActive] = React.useState(0);
   const [period, setPeriod] = React.useState(0);
   const handleChangePlan = (index: number) => {
