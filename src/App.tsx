@@ -89,7 +89,7 @@ export default function App() {
                   <AnimatedNumbers
                     includeComma
                     className="text-black font-medium"
-                    transitions={(index) => ({
+                    transitions={() => ({
                       type: "spring",
                       duration: 0.3,
                     })}
@@ -127,7 +127,7 @@ export default function App() {
                   <AnimatedNumbers
                     includeComma
                     className="text-black font-medium"
-                    transitions={(index) => ({
+                    transitions={() => ({
                       type: "spring",
                       duration: 0.3,
                     })}
