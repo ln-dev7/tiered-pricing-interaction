@@ -1,4 +1,4 @@
-import AnimatedNumbers from "react-animated-numbers";
+import NumberFlow from '@number-flow/react'
 import React from "react";
 
 export default function App() {
@@ -86,14 +86,9 @@ export default function App() {
               <p className="text-slate-500 text-md flex">
                 <span className="text-black font-medium flex items-center">
                   ${" "}
-                  <AnimatedNumbers
-                    includeComma
+                  <NumberFlow
                     className="text-black font-medium"
-                    transitions={() => ({
-                      type: "spring",
-                      duration: 0.3,
-                    })}
-                    animateToNumber={starter}
+                    value={starter}
                   />
                 </span>
                 /month
@@ -124,14 +119,9 @@ export default function App() {
               <p className="text-slate-500 text-md flex">
                 <span className="text-black font-medium flex items-center">
                   ${" "}
-                  <AnimatedNumbers
-                    includeComma
+                  <NumberFlow
                     className="text-black font-medium"
-                    transitions={() => ({
-                      type: "spring",
-                      duration: 0.3,
-                    })}
-                    animateToNumber={pro}
+                    value={pro}
                   />
                 </span>
                 /month
